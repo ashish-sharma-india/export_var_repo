@@ -4,9 +4,11 @@ timeoutInSeconds: 6000
 runAs: root
 shell: bash
 env:
+  variables:
+    "testEnv" : "testEnvValue1"
   exportedVariables:
+    - testEnv
     - BuildServiceDemoVersion
-
 steps:
   - type: Command
     name: "List Build Source"
